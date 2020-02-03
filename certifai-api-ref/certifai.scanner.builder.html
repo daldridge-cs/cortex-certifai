@@ -1,0 +1,1568 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>certifai.scanner.builder module &mdash; Certifai API  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="certifai.scanner package" href="certifai.scanner.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Certifai API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v0.5.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="../#http://">Certifai home</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.cognitivescale.com/legal-information/">Terms and Conditions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Packages</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="certifai.html">certifai package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="certifai.scanner.html">certifai.scanner package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="certifai.scanner.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">certifai.scanner.builder module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="certifai.scanner.html#module-certifai.scanner">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Certifai API</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="certifai.html">certifai package</a> &raquo;</li>
+        
+          <li><a href="certifai.scanner.html">certifai.scanner package</a> &raquo;</li>
+        
+      <li>certifai.scanner.builder module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/certifai.scanner.builder.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-certifai.scanner.builder">
+<span id="certifai-scanner-builder-module"></span><h1>certifai.scanner.builder module<a class="headerlink" href="#module-certifai.scanner.builder" title="Permalink to this headline">¶</a></h1>
+<p>Certifai Scan object model builder</p>
+<p>Contains classes representing a Certifai scan definition, and the ability to programmatically
+manipulate, load, save and run them</p>
+<dl class="class">
+<dt id="certifai.scanner.builder.PredictionTask">
+<em class="property">class </em><code class="sig-prename descclassname">certifai.scanner.builder.</code><code class="sig-name descname">PredictionTask</code><span class="sig-paren">(</span><em class="sig-param">task_type: str, prediction_description: Optional[str], favorable_outcome: Optional[Any]</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.PredictionTask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metadata about the prediction task - immutable once instantiated</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_type</strong> (<em>str</em>) – <p>One of the supported Certifai task types.  Currently:</p>
+<ul>
+<li><p>’binary-classification’</p></li>
+<li><p>’regression’</p></li>
+</ul>
+</p></li>
+<li><p><strong>prediction_description</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – Free text description of what is being predicted</p></li>
+<li><p><strong>favorable_outcome</strong> (<em>Optional</em><em>[</em><em>Any</em><em>]</em>) – <ul>
+<li><p>For classification the value of the predicted label considered favorable</p></li>
+<li><p>For regression one of ‘increased’ or ‘decreased’</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="certifai.scanner.builder.PredictionTask.task_type">
+<em class="property">property </em><code class="sig-name descname">task_type</code><a class="headerlink" href="#certifai.scanner.builder.PredictionTask.task_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The task type from the list described in the constructor</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the task type</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.PredictionTask.prediction_description">
+<em class="property">property </em><code class="sig-name descname">prediction_description</code><a class="headerlink" href="#certifai.scanner.builder.PredictionTask.prediction_description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Description of what the prediction represents</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the description, if any</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>Optional[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.PredictionTask.favorable_outcome">
+<em class="property">property </em><code class="sig-name descname">favorable_outcome</code><a class="headerlink" href="#certifai.scanner.builder.PredictionTask.favorable_outcome" title="Permalink to this definition">¶</a></dt>
+<dd><p>What the favorable prediction value is</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the favorable label (classification) or direction (regression) if set</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>Optional[Any]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="certifai.scanner.builder.ModelMetric">
+<em class="property">class </em><code class="sig-prename descclassname">certifai.scanner.builder.</code><code class="sig-name descname">ModelMetric</code><span class="sig-paren">(</span><em class="sig-param">name: str</em>, <em class="sig-param">certifai_metric: Optional[str] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.ModelMetric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metadata for a metric - immutable once instantiated</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Free text descriptive name of the metric</p></li>
+<li><p><strong>certifai_metric</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – <p>If specified will allow Certifai to calculate the value.
+Supported values are:</p>
+<blockquote>
+<div><ul>
+<li><p>’accuracy’ (classification)</p></li>
+<li><p>’precision’ (classification)</p></li>
+<li><p>’recall’ (classification)</p></li>
+<li><p>’f1’  (classification)</p></li>
+<li><p>’r-squared’ (regression)</p></li>
+</ul>
+</div></blockquote>
+</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="certifai.scanner.builder.ModelMetric.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#certifai.scanner.builder.ModelMetric.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Descriptive name of the metric</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the human-readable metric name</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ModelMetric.certifai_metric">
+<em class="property">property </em><code class="sig-name descname">certifai_metric</code><a class="headerlink" href="#certifai.scanner.builder.ModelMetric.certifai_metric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Certifai metric type name</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the Certifai-evaluable metric type (if set)</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>Optional[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="certifai.scanner.builder.PredictorWrapper">
+<em class="property">class </em><code class="sig-prename descclassname">certifai.scanner.builder.</code><code class="sig-name descname">PredictorWrapper</code><span class="sig-paren">(</span><em class="sig-param">predictor: certifai.common.hosted_model.IBaseModel</em>, <em class="sig-param">encoder: Optional[Callable[Sequence</em>, <em class="sig-param">Sequence]] = None</em>, <em class="sig-param">decoder: Optional[Callable[Sequence</em>, <em class="sig-param">Sequence]] = None</em>, <em class="sig-param">wrapped: Optional[certifai.common.hosted_model.IHostedModel] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.PredictorWrapper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper class for in-process models</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>predictor</strong> (<em>IBaseModel</em>) – Any predictor object that has a <cite>predict</cite> method
+which takes a sequence of data vectors as a numpy array and returns
+a sequence of corresponding predicted values</p></li>
+<li><p><strong>encoder</strong> (<em>Optional</em><em>[</em><em>Callable</em><em>[</em><em>[</em><em>Sequence</em><em>]</em><em>,</em><em>Sequence</em><em>]</em><em>]</em>) – optional function used to
+transform the predictor’s input (e.g. - to perform one-hot encoding and so on)</p></li>
+<li><p><strong>decoder</strong> (<em>Optional</em><em>[</em><em>Callable</em><em>[</em><em>[</em><em>Sequence</em><em>]</em><em>,</em><em>Sequence</em><em>]</em><em>]</em>) – optional function used to
+transform the predictor’s output (e.g. - to binarize with a threshold)</p></li>
+<li><p><strong>wrapped</strong> (<em>Optional</em><em>[</em><em>IHostedModel</em><em>]</em>) – if specified other parameters are ignored and the wrapper
+just proxies the (already wrapped) model provided here (mostly intended for
+internal usage)</p></li>
+</ul>
+</dd>
+</dl>
+<p><em>Note</em> - the underlying model and any encoder and decoders used must be picklable</p>
+<dl class="method">
+<dt id="certifai.scanner.builder.PredictorWrapper.model">
+<em class="property">property </em><code class="sig-name descname">model</code><a class="headerlink" href="#certifai.scanner.builder.PredictorWrapper.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Certifai metric type name</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the wrapped model suitable for use by Certifai</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p><cite>IHostedModel</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="certifai.scanner.builder.CertifaiModel">
+<em class="property">class </em><code class="sig-prename descclassname">certifai.scanner.builder.</code><code class="sig-name descname">CertifaiModel</code><span class="sig-paren">(</span><em class="sig-param">id: str</em>, <em class="sig-param">name: Optional[str] = None</em>, <em class="sig-param">author: Optional[str] = None</em>, <em class="sig-param">version: Optional[str] = None</em>, <em class="sig-param">performance_metric_values: Optional[List[Tuple]] = None</em>, <em class="sig-param">description: Optional[str] = None</em>, <em class="sig-param">predict_endpoint: Optional[str] = None</em>, <em class="sig-param">max_batch_size: Optional[int] = None</em>, <em class="sig-param">local_predictor: Optional[certifai.scanner.builder.PredictorWrapper] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.CertifaiModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metadata describing a model, and allowing manipulation of this metadata</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<em>str</em>) – Identifier for the model used to refer to it.</p></li>
+<li><p><strong>name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – Descriptive name for the model.  Defaults to the
+value provided for <cite>id</cite></p></li>
+<li><p><strong>author</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – Optional author name</p></li>
+<li><p><strong>version</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – Optional model version string</p></li>
+<li><p><strong>performance_metric_values</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>Tuple</em><em>]</em><em>]</em>) – Optional asserted list of (<cite>metric_name</cite>, <cite>value</cite>)
+pairs for metrics of the model - primarily intended to allow injection of externally
+measured values for metrics not directly supported by Certifai</p></li>
+<li><p><strong>description</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – Optional free text description of the model</p></li>
+<li><p><strong>predict_endpoint</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – URL of the prediction endpoint of the model (if non-process-local)</p></li>
+<li><p><strong>max_batch_size</strong> (<em>Optional</em><em>[</em><em>int</em><em>]</em>) – Optional limit on prediction batch sizes to call the model with</p></li>
+<li><p><strong>local_predictor</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#certifai.scanner.builder.PredictorWrapper" title="certifai.scanner.builder.PredictorWrapper"><em>PredictorWrapper</em></a><em>]</em>) – wrapped model object (if using a local in-process model)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="certifai.scanner.builder.CertifaiModel.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#certifai.scanner.builder.CertifaiModel.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Model name</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the human-readable name of the model</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.CertifaiModel.id">
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#certifai.scanner.builder.CertifaiModel.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Model id</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the identifier for the model by which it may be referenced</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.CertifaiModel.author">
+<em class="property">property </em><code class="sig-name descname">author</code><a class="headerlink" href="#certifai.scanner.builder.CertifaiModel.author" title="Permalink to this definition">¶</a></dt>
+<dd><p>Model author</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the author string if provided</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Set author string for the model</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Optional[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.CertifaiModel.version">
+<em class="property">property </em><code class="sig-name descname">version</code><a class="headerlink" href="#certifai.scanner.builder.CertifaiModel.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Model version</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the version string if provided</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Set version string for the model</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Optional[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.CertifaiModel.description">
+<em class="property">property </em><code class="sig-name descname">description</code><a class="headerlink" href="#certifai.scanner.builder.CertifaiModel.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Model description</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the description string if provided</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Set description string for the model</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Optional[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.CertifaiModel.predict_endpoint">
+<em class="property">property </em><code class="sig-name descname">predict_endpoint</code><a class="headerlink" href="#certifai.scanner.builder.CertifaiModel.predict_endpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Model predict endpoint URL</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the URL of the (remote) model prediction endpoint, if provided</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the prediction endpoint URL for the model</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Optional[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.CertifaiModel.max_batch_size">
+<em class="property">property </em><code class="sig-name descname">max_batch_size</code><a class="headerlink" href="#certifai.scanner.builder.CertifaiModel.max_batch_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Model max batch size</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the max batch size to send to the model</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the provided restriction on max batch size (None =&gt; unlimited)</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Optional[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.CertifaiModel.local_predictor">
+<em class="property">property </em><code class="sig-name descname">local_predictor</code><a class="headerlink" href="#certifai.scanner.builder.CertifaiModel.local_predictor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapped local (in-process) model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the wrapped model being used</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets a local wrapped model (see <a class="reference internal" href="#certifai.scanner.builder.PredictorWrapper" title="certifai.scanner.builder.PredictorWrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">PredictorWrapper</span></code></a>) to use</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Optional[<a class="reference internal" href="#certifai.scanner.builder.PredictorWrapper" title="certifai.scanner.builder.PredictorWrapper">PredictorWrapper</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.CertifaiModel.performance_metric_values">
+<em class="property">property </em><code class="sig-name descname">performance_metric_values</code><a class="headerlink" href="#certifai.scanner.builder.CertifaiModel.performance_metric_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of asserted metric values for this model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns any asserted values as (<cite>metric name</cite>, <cite>value</cite>) tuples</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>List[Tuple[str,Any]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.CertifaiModel.add_performance_metric_value">
+<code class="sig-name descname">add_performance_metric_value</code><span class="sig-paren">(</span><em class="sig-param">metric_name: str</em>, <em class="sig-param">metric_value: Any</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.CertifaiModel.add_performance_metric_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an asserted performance metric value</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>metric_name</strong> (<em>str</em>) – Name of the metric to assert a value for</p></li>
+<li><p><strong>value</strong> (<em>Any</em>) – Value to assert</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.CertifaiModel.remove_performance_metric_value">
+<code class="sig-name descname">remove_performance_metric_value</code><span class="sig-paren">(</span><em class="sig-param">metric_name: str</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.CertifaiModel.remove_performance_metric_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove an asserted metric value</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>metric_name</strong> – name of the metric to remove the asserted value for</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="certifai.scanner.builder.CertifaiFeatureDataType">
+<em class="property">class </em><code class="sig-prename descclassname">certifai.scanner.builder.</code><code class="sig-name descname">CertifaiFeatureDataType</code><span class="sig-paren">(</span><em class="sig-param">args: dict</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.CertifaiFeatureDataType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class describing feature datatypes supported by Certifai - immutable once instantiated.
+Static methods are provided for instantiating each supported type</p>
+<dl class="method">
+<dt id="certifai.scanner.builder.CertifaiFeatureDataType.value_dict">
+<em class="property">property </em><code class="sig-name descname">value_dict</code><a class="headerlink" href="#certifai.scanner.builder.CertifaiFeatureDataType.value_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Data type details as a dictionary</p>
+<dl class="field-list">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the metadata dict for this datatype.  In particular
+this will contain a key named <cite>data_type</cite> which will be one of</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>‘numerical-int’</p></li>
+<li><p>‘numerical-float’</p></li>
+<li><p>‘categorical’</p></li>
+</ul>
+</div></blockquote>
+<p>Other keys vary by datatype</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.CertifaiFeatureDataType.int">
+<em class="property">static </em><code class="sig-name descname">int</code><span class="sig-paren">(</span><em class="sig-param">min: Optional[int] = None</em>, <em class="sig-param">max: Optional[int] = None</em>, <em class="sig-param">spread: Optional[float] = None</em><span class="sig-paren">)</span> &#x2192; certifai.scanner.builder.CertifaiFeatureDataType<a class="headerlink" href="#certifai.scanner.builder.CertifaiFeatureDataType.int" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor for an ‘int’ feature</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>min</strong> (<em>Optional</em><em>[</em><em>int</em><em>]</em>) – optional floor value this feature can take</p></li>
+<li><p><strong>max</strong> (<em>Optional</em><em>[</em><em>int</em><em>]</em>) – optional ceiling value this feature can take</p></li>
+<li><p><strong>spread</strong> (<em>Optional</em><em>[</em><em>float</em><em>]</em>) – optional measure of spread (typically MAD or std. deviation)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>instantiated <cite>CertifaiFeatureDataType</cite></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><cite>CertifaiFeatureDataType</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.CertifaiFeatureDataType.float">
+<em class="property">static </em><code class="sig-name descname">float</code><span class="sig-paren">(</span><em class="sig-param">min: Optional[float] = None</em>, <em class="sig-param">max: Optional[float] = None</em>, <em class="sig-param">spread: Optional[float] = None</em><span class="sig-paren">)</span> &#x2192; certifai.scanner.builder.CertifaiFeatureDataType<a class="headerlink" href="#certifai.scanner.builder.CertifaiFeatureDataType.float" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor for an ‘float’ feature</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>min</strong> (<em>Optional</em><em>[</em><em>float</em><em>]</em>) – optional floor value this feature can take</p></li>
+<li><p><strong>max</strong> (<em>Optional</em><em>[</em><em>float</em><em>]</em>) – optional ceiling value this feature can take</p></li>
+<li><p><strong>spread</strong> (<em>Optional</em><em>[</em><em>float</em><em>]</em>) – optional measure of spread (typically MAD or std deviation)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>instantiated <cite>CertifaiFeatureDataType</cite></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><cite>CertifaiFeatureDataType</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.CertifaiFeatureDataType.categorical">
+<em class="property">static </em><code class="sig-name descname">categorical</code><span class="sig-paren">(</span><em class="sig-param">values: Optional[Iterable[Union[str</em>, <em class="sig-param">int]]] = None</em><span class="sig-paren">)</span> &#x2192; certifai.scanner.builder.CertifaiFeatureDataType<a class="headerlink" href="#certifai.scanner.builder.CertifaiFeatureDataType.categorical" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor for a ‘categorical’ feature</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>values</strong> (<em>Optional</em><em>[</em><em>Iterable</em><em>[</em><em>Union</em><em>[</em><em>str</em><em>,</em><em>int</em><em>]</em><em>]</em><em>]</em>) – optional list of possible values this
+categorical field may take on.  If omitted then Certifai will infer the value set
+from the available data</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>instantiated <cite>CertifaiFeatureDataType</cite></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><cite>CertifaiFeatureDataType</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="certifai.scanner.builder.CertifaiFeatureSchema">
+<em class="property">class </em><code class="sig-prename descclassname">certifai.scanner.builder.</code><code class="sig-name descname">CertifaiFeatureSchema</code><span class="sig-paren">(</span><em class="sig-param">name: str</em>, <em class="sig-param">data_type: Optional[certifai.scanner.builder.CertifaiFeatureDataType] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.CertifaiFeatureSchema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class describing a feature - immutable once instantiated</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the feature (should match any column headers in the dataset if any)</p></li>
+<li><p><strong>data_type</strong> (<a class="reference internal" href="#certifai.scanner.builder.CertifaiFeatureDataType" title="certifai.scanner.builder.CertifaiFeatureDataType"><em>CertifaiFeatureDataType</em></a>) – Type of data the feature holds</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="certifai.scanner.builder.CertifaiFeatureSchema.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#certifai.scanner.builder.CertifaiFeatureSchema.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Feature name</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the name of the feature</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.CertifaiFeatureSchema.data_type">
+<em class="property">property </em><code class="sig-name descname">data_type</code><a class="headerlink" href="#certifai.scanner.builder.CertifaiFeatureSchema.data_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Feature data type</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the data type of the feature</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#certifai.scanner.builder.CertifaiFeatureDataType" title="certifai.scanner.builder.CertifaiFeatureDataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">CertifaiFeatureDataType</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="certifai.scanner.builder.CertifaiDataSchema">
+<em class="property">class </em><code class="sig-prename descclassname">certifai.scanner.builder.</code><code class="sig-name descname">CertifaiDataSchema</code><span class="sig-paren">(</span><em class="sig-param">features: Optional[List[certifai.scanner.builder.CertifaiFeatureSchema]] = None</em>, <em class="sig-param">outcome_feature_name: Optional[str] = None</em>, <em class="sig-param">predicted_outcome_feature_name: Optional[str] = None</em>, <em class="sig-param">defined_feature_order: bool = False</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.CertifaiDataSchema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class describing a dataset’s feature schema, and allowing manipulation of this schema</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>features</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><a class="reference internal" href="#certifai.scanner.builder.CertifaiFeatureSchema" title="certifai.scanner.builder.CertifaiFeatureSchema"><em>CertifaiFeatureSchema</em></a><em>]</em><em>]</em>) – features specified by the scan definition.
+This may be a subset of all the features present.  Any that are omitted will be inferred from
+the available data</p></li>
+<li><p><strong>outcome_feature_name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – name of the feature holding the ground truth label/value (if present)
+<em>Note</em> Any outcome feature column will be removed before passing data to the model</p></li>
+<li><p><strong>predicted_outcome_feature_name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – name of the feature holding the predicted label/value (if present)
+<em>Note</em> Any predicted_outcome feature column will be removed before passing data to the model</p></li>
+<li><p><strong>defined_feature_order</strong> (<em>bool</em>) – If present and True asserts that the list order of features in the schema
+matches the layout of columns in the dataset.  If True then all columns must be present.  Intended
+for use in cases where the dataset does not specify a column ordering itself</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="certifai.scanner.builder.CertifaiDataSchema.features">
+<em class="property">property </em><code class="sig-name descname">features</code><a class="headerlink" href="#certifai.scanner.builder.CertifaiDataSchema.features" title="Permalink to this definition">¶</a></dt>
+<dd><p>features defined by the schema</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the list of defined features</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>Optional[List[<a class="reference internal" href="#certifai.scanner.builder.CertifaiFeatureSchema" title="certifai.scanner.builder.CertifaiFeatureSchema">CertifaiFeatureSchema</a>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.CertifaiDataSchema.defined_feature_order">
+<em class="property">property </em><code class="sig-name descname">defined_feature_order</code><a class="headerlink" href="#certifai.scanner.builder.CertifaiDataSchema.defined_feature_order" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the schema defines the column ordering of the data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns True if the schema defines the column ordering</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets whether the schema defines the column ordering of the data</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.CertifaiDataSchema.add_feature">
+<code class="sig-name descname">add_feature</code><span class="sig-paren">(</span><em class="sig-param">name: str</em>, <em class="sig-param">data_type: certifai.scanner.builder.CertifaiFeatureDataType</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.CertifaiDataSchema.add_feature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a feature</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Name of feature to add</p></li>
+<li><p><strong>data_type</strong> (<a class="reference internal" href="#certifai.scanner.builder.CertifaiFeatureDataType" title="certifai.scanner.builder.CertifaiFeatureDataType"><em>CertifaiFeatureDataType</em></a>) – data type of feature to add</p></li>
+</ul>
+</dd>
+</dl>
+<p><em>Note</em> - the feature will be appended to the current list</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.CertifaiDataSchema.insert_feature">
+<code class="sig-name descname">insert_feature</code><span class="sig-paren">(</span><em class="sig-param">name: str</em>, <em class="sig-param">index: int</em>, <em class="sig-param">data_type: certifai.scanner.builder.CertifaiFeatureDataType</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.CertifaiDataSchema.insert_feature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert a feature</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Name of feature to add</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – Columnar position to insert the feature at (0-based)</p></li>
+<li><p><strong>data_type</strong> (<a class="reference internal" href="#certifai.scanner.builder.CertifaiFeatureDataType" title="certifai.scanner.builder.CertifaiFeatureDataType"><em>CertifaiFeatureDataType</em></a>) – data type of feature to add</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.CertifaiDataSchema.remove_feature">
+<code class="sig-name descname">remove_feature</code><span class="sig-paren">(</span><em class="sig-param">name: str</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.CertifaiDataSchema.remove_feature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove a feature</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – Name of feature to remove</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.CertifaiDataSchema.outcome_feature_name">
+<em class="property">property </em><code class="sig-name descname">outcome_feature_name</code><a class="headerlink" href="#certifai.scanner.builder.CertifaiDataSchema.outcome_feature_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the (ground truth) outcome column (if any)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the feature name of the outcome feature</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the name of the (ground truth) outcome column</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Optional[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.CertifaiDataSchema.predicted_outcome_feature_name">
+<em class="property">property </em><code class="sig-name descname">predicted_outcome_feature_name</code><a class="headerlink" href="#certifai.scanner.builder.CertifaiDataSchema.predicted_outcome_feature_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the predicted outcome column (if any)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the feature name of the predicted outcome feature</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the name of the predicted outcome column</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Optional[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="certifai.scanner.builder.DatasetSource">
+<em class="property">class </em><code class="sig-prename descclassname">certifai.scanner.builder.</code><code class="sig-name descname">DatasetSource</code><span class="sig-paren">(</span><em class="sig-param">args</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.DatasetSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class describing dataset storage formats supported by Certifai - immutable once instantiated.
+Static methods are provided for instantiating each supported format</p>
+<dl class="method">
+<dt id="certifai.scanner.builder.DatasetSource.value_dict">
+<em class="property">property </em><code class="sig-name descname">value_dict</code><a class="headerlink" href="#certifai.scanner.builder.DatasetSource.value_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Data source details as a dictionary</p>
+<dl class="field-list">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the metadata dict for this data source.  In particular
+this will contain a key named <cite>file_type</cite> which will be one of</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>‘csv’</p></li>
+<li><p>‘json’</p></li>
+<li><p>‘loaded’</p></li>
+</ul>
+</div></blockquote>
+<p>Other keys vary by source type</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.DatasetSource.json">
+<em class="property">static </em><code class="sig-name descname">json</code><span class="sig-paren">(</span><em class="sig-param">url: str</em>, <em class="sig-param">lines: bool = True</em>, <em class="sig-param">orient: str = 'records'</em>, <em class="sig-param">encoding: Optional[str] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.DatasetSource.json" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor for a ‘json’ source</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>url</strong> (<em>str</em>) – Location the data may be loaded from.  If no protocol is specified then ‘file:’
+is assumed</p></li>
+<li><p><strong>lines</strong> (<em>bool</em>) – If True then JSON lines format (default is True), else JSON list expected</p></li>
+<li><p><strong>orient</strong> (<em>str</em>) – One of ‘records’, ‘columns’, ‘values’ (matching Pandas usage).  Default is ‘records’</p></li>
+<li><p><strong>encoding</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – string encoding used - default is ‘utf-8’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>instantiated <cite>DatasetSource</cite></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><cite>DatasetSource</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.DatasetSource.csv">
+<em class="property">static </em><code class="sig-name descname">csv</code><span class="sig-paren">(</span><em class="sig-param">url: str</em>, <em class="sig-param">delimiter: str = '</em>, <em class="sig-param">'</em>, <em class="sig-param">escape_character: Optional[str] = None</em>, <em class="sig-param">quote_character: str = '&quot;'</em>, <em class="sig-param">has_header: bool = True</em>, <em class="sig-param">encoding: Optional[str] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.DatasetSource.csv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor for a ‘csv’ source</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>url</strong> (<em>str</em>) – Location the data may be loaded from.  If no protocol is specified then ‘file:’
+is assumed</p></li>
+<li><p><strong>delimiter</strong> (<em>str</em>) – Record separator used.  Default is ‘,’</p></li>
+<li><p><strong>escape_character</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – Escape character if any.  Default is None</p></li>
+<li><p><strong>quote_character</strong> (<em>str</em>) – Quote delimiter.  Default is ‘”’</p></li>
+<li><p><strong>has_header</strong> (<em>bool</em>) – Whether the source CSV has a header row specifying column names.  Default is True</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>instantiated <cite>DatasetSource</cite></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><cite>DatasetSource</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.DatasetSource.dataframe">
+<em class="property">static </em><code class="sig-name descname">dataframe</code><span class="sig-paren">(</span><em class="sig-param">df</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.DatasetSource.dataframe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor for a ‘dataframe’ source (an already loaded Pandas dataframe)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>df</strong> (<em>DataFrame</em>) – Dataframe containing the data</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>instantiated <cite>DatasetSource</cite></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><cite>DatasetSource</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="certifai.scanner.builder.CertifaiDataset">
+<em class="property">class </em><code class="sig-prename descclassname">certifai.scanner.builder.</code><code class="sig-name descname">CertifaiDataset</code><span class="sig-paren">(</span><em class="sig-param">id: str</em>, <em class="sig-param">source: certifai.scanner.builder.DatasetSource</em>, <em class="sig-param">name: Optional[str] = None</em>, <em class="sig-param">description: Optional[str] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.CertifaiDataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metadata describing a dataset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<em>str</em>) – identifier string by which the dataset may be referenced</p></li>
+<li><p><strong>source</strong> (<a class="reference internal" href="#certifai.scanner.builder.DatasetSource" title="certifai.scanner.builder.DatasetSource"><em>DatasetSource</em></a>) – source for the actual data in the dataset</p></li>
+<li><p><strong>name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – Optional human readable name of the dataset</p></li>
+<li><p><strong>description</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – Optional free text description of the dataset</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="certifai.scanner.builder.CertifaiGroupingBucket">
+<em class="property">class </em><code class="sig-prename descclassname">certifai.scanner.builder.</code><code class="sig-name descname">CertifaiGroupingBucket</code><span class="sig-paren">(</span><em class="sig-param">description: str</em>, <em class="sig-param">max: Optional[float] = None</em>, <em class="sig-param">values: Optional[List[Union[str</em>, <em class="sig-param">int]]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.CertifaiGroupingBucket" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metadata describing a value grouping bucket for feature values - immutable once instantiated</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>description</strong> (<em>str</em>) – Descriptive name of the bucket</p></li>
+<li><p><strong>max</strong> (<em>Optional</em><em>[</em><em>float</em><em>]</em>) – Optional maximum numerical value in the bucket (may only be used with numeric features)</p></li>
+<li><p><strong>values</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>Union</em><em>[</em><em>str</em><em>,</em><em>int</em><em>]</em><em>]</em><em>]</em>) – Optional explicit list of values falling within the bucket (primarily
+intended for use with categorical features)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="certifai.scanner.builder.CertifaiGroupingBucket.description">
+<em class="property">property </em><code class="sig-name descname">description</code><a class="headerlink" href="#certifai.scanner.builder.CertifaiGroupingBucket.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Description of the bucket</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the bucket description string</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.CertifaiGroupingBucket.max">
+<em class="property">property </em><code class="sig-name descname">max</code><a class="headerlink" href="#certifai.scanner.builder.CertifaiGroupingBucket.max" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum numeric value falling within the bucket (if specified)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the bucket ceiling value</p>
+</dd>
+</dl>
+<p><em>Note</em> - the floor of a bucket is determined by the ceiling of the
+previous bucket.  The entire bucket list will be sorted on <cite>max</cite> values
+and a sentinel bucket with no maximum value should be included in the list
+:type: Optional[float]</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.CertifaiGroupingBucket.values">
+<em class="property">property </em><code class="sig-name descname">values</code><a class="headerlink" href="#certifai.scanner.builder.CertifaiGroupingBucket.values" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of values falling within the bucket if defined</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the list of values or None if not defined</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>Iterable[Union[str,int]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="certifai.scanner.builder.CertifaiGroupingFeature">
+<em class="property">class </em><code class="sig-prename descclassname">certifai.scanner.builder.</code><code class="sig-name descname">CertifaiGroupingFeature</code><span class="sig-paren">(</span><em class="sig-param">name: str</em>, <em class="sig-param">buckets: Optional[Iterable[certifai.scanner.builder.CertifaiGroupingBucket]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.CertifaiGroupingFeature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metadata describing a fairness grouping feature - immutable once instantiated</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Feature name of the feature which defines the grouping</p></li>
+<li><p><strong>buckets</strong> (<em>Optional</em><em>[</em><em>Iterable</em><em>[</em><a class="reference internal" href="#certifai.scanner.builder.CertifaiGroupingBucket" title="certifai.scanner.builder.CertifaiGroupingBucket"><em>CertifaiGroupingBucket</em></a><em>]</em><em>]</em>) – Optional definition
+for bucketing the values of the feature.  If not specified then every unique
+value occurring in the data will be treated as its own group</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="certifai.scanner.builder.CertifaiGroupingFeature.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#certifai.scanner.builder.CertifaiGroupingFeature.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the grouping feature</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the feature name used to define the groups</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.CertifaiGroupingFeature.buckets">
+<em class="property">property </em><code class="sig-name descname">buckets</code><a class="headerlink" href="#certifai.scanner.builder.CertifaiGroupingFeature.buckets" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of grouping buckets</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the list of grouping buckets for the grouping feature, if defined</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>Iterable[<a class="reference internal" href="#certifai.scanner.builder.CertifaiGroupingBucket" title="certifai.scanner.builder.CertifaiGroupingBucket">CertifaiGroupingBucket</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="certifai.scanner.builder.ScanBuilder">
+<em class="property">class </em><code class="sig-prename descclassname">certifai.scanner.builder.</code><code class="sig-name descname">ScanBuilder</code><span class="sig-paren">(</span><em class="sig-param">base: certifai.scanner.schemas.ScanTemplate</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Builder class for scan templates, with static method for instantiation, and
+methods for manipulation, persistence, and running of the defined scan</p>
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.template">
+<em class="property">property </em><code class="sig-name descname">template</code><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.template" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve a scan template which can be serialized to dictionary form for saving as JSON
+or YAML by calling its <cite>dump</cite> method
+:return: <cite>ScanTemplate</cite> instance</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.author">
+<em class="property">property </em><code class="sig-name descname">author</code><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.author" title="Permalink to this definition">¶</a></dt>
+<dd><p>Author of the template</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the author of the scan template, if defined</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the author of the scan template</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Optional[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.use_case_name">
+<em class="property">property </em><code class="sig-name descname">use_case_name</code><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.use_case_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use case name - human readable name for a use case (i.e. - a prediction task)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the use case name</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the use case name</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.use_case_id">
+<em class="property">property </em><code class="sig-name descname">use_case_id</code><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.use_case_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use case id - id by which the use case may be referenced</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the use case id</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the use case id</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.evaluation_name">
+<em class="property">property </em><code class="sig-name descname">evaluation_name</code><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.evaluation_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluation name - name of a particular evaluation (scan run)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the evaluation name</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the evaluation name</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.evaluation_environment">
+<em class="property">property </em><code class="sig-name descname">evaluation_environment</code><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.evaluation_environment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluation environment - free text string with evaluation environment details</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the evaluation environment string</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the evaluation environment string</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.evaluation_description">
+<em class="property">property </em><code class="sig-name descname">evaluation_description</code><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.evaluation_description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluation description - free text string describing the evaluation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the evaluation description string</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the evaluation description string</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.evaluation_dataset_id">
+<em class="property">property </em><code class="sig-name descname">evaluation_dataset_id</code><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.evaluation_dataset_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluation dataset id - specifies which dataset to use as the evaluation set</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the evaluation dataset id</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the evaluation dataset id</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.explanation_dataset_id">
+<em class="property">property </em><code class="sig-name descname">explanation_dataset_id</code><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.explanation_dataset_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Explanation dataset id - specifies which dataset to generate explanations of
+if the ‘explanation’ evaluation type is included in the scan</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the explanation dataset id</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the explanation dataset id</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Optional[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.test_dataset_id">
+<em class="property">property </em><code class="sig-name descname">test_dataset_id</code><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.test_dataset_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test dataset id - specifies which dataset to measure metrics on
+if the ‘performance’ evaluation type is included in the scan</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the test dataset id</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the test dataset id</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Optional[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.prediction_task">
+<em class="property">property </em><code class="sig-name descname">prediction_task</code><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.prediction_task" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metadata for the prediction task</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the prediction task metadata</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the prediction task metadata</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><cite>PredictionTask</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.add_evaluation_type">
+<code class="sig-name descname">add_evaluation_type</code><span class="sig-paren">(</span><em class="sig-param">value: str</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.add_evaluation_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an evaluation type to the scan</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>str</em>) – type of evaluation to add.  Must be one of
+- ‘fairness’
+- ‘robustness’
+- ‘explanation’
+- ‘explainability’
+- ‘performance’</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.remove_evaluation_type">
+<code class="sig-name descname">remove_evaluation_type</code><span class="sig-paren">(</span><em class="sig-param">value: str</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.remove_evaluation_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove an evaluation type from the scan</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>str</em>) – type of evaluation to remove</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.evaluation_types">
+<em class="property">property </em><code class="sig-name descname">evaluation_types</code><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.evaluation_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluation types included in the scan</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the list of included evaluation types</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>Iterable[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.hyper_parameter_overrides">
+<em class="property">property </em><code class="sig-name descname">hyper_parameter_overrides</code><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.hyper_parameter_overrides" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hyper-parameter overrides to apply to the analysis</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns a dictionary of hyper-parameter overrides</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Specifies a dictionary of hyper-parameter overrides</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.add_fairness_grouping_feature">
+<code class="sig-name descname">add_fairness_grouping_feature</code><span class="sig-paren">(</span><em class="sig-param">feature: certifai.scanner.builder.CertifaiGroupingFeature</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.add_fairness_grouping_feature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a fairness grouping feature</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>feature</strong> (<a class="reference internal" href="#certifai.scanner.builder.CertifaiGroupingFeature" title="certifai.scanner.builder.CertifaiGroupingFeature"><em>CertifaiGroupingFeature</em></a>) – grouping feature definition</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.remove_fairness_grouping_feature">
+<code class="sig-name descname">remove_fairness_grouping_feature</code><span class="sig-paren">(</span><em class="sig-param">name: str</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.remove_fairness_grouping_feature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove a fairness grouping feature</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – name of the grouping feature to remove</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.fairness_grouping_features">
+<em class="property">property </em><code class="sig-name descname">fairness_grouping_features</code><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.fairness_grouping_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fairness grouping features defined for the scan</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns a list of defined grouping features</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>List[<a class="reference internal" href="#certifai.scanner.builder.CertifaiGroupingFeature" title="certifai.scanner.builder.CertifaiGroupingFeature">CertifaiGroupingFeature</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.add_metric">
+<code class="sig-name descname">add_metric</code><span class="sig-paren">(</span><em class="sig-param">metric: certifai.scanner.builder.ModelMetric</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.add_metric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a performance metric</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>metric</strong> (<a class="reference internal" href="#certifai.scanner.builder.ModelMetric" title="certifai.scanner.builder.ModelMetric"><em>ModelMetric</em></a>) – metric to add</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.remove_metric">
+<code class="sig-name descname">remove_metric</code><span class="sig-paren">(</span><em class="sig-param">name: str</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.remove_metric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove a performance metric</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – Name of the metric to remove</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.metrics">
+<em class="property">property </em><code class="sig-name descname">metrics</code><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.metrics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performance metrics defined for the scan</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns a list of defined performance metrics</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>List[<a class="reference internal" href="#certifai.scanner.builder.ModelMetric" title="certifai.scanner.builder.ModelMetric">ModelMetric</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.atx_performance_metric">
+<em class="property">property </em><code class="sig-name descname">atx_performance_metric</code><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.atx_performance_metric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metric to select for the performance axis of the ATX score</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the name of the selected performance metric for use in ATX calculation</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the name of the selected performance metric for use in ATX calculation</p>
+</dd>
+</dl>
+<p>Accepts an <cite>Optional[str]</cite> specifying the performance metric name (if any) on set, returns
+<cite>Optional[ModelMetric]</cite> of the metric instance on get</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.add_model">
+<code class="sig-name descname">add_model</code><span class="sig-paren">(</span><em class="sig-param">model: certifai.scanner.builder.CertifaiModel</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.add_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a model to the scan</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>model</strong> (<a class="reference internal" href="#certifai.scanner.builder.CertifaiModel" title="certifai.scanner.builder.CertifaiModel"><em>CertifaiModel</em></a>) – metadata of the model to add</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.remove_model">
+<code class="sig-name descname">remove_model</code><span class="sig-paren">(</span><em class="sig-param">id: str</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.remove_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove a model from the scan</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>str</em>) – Removes the model with the specified id</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.models">
+<em class="property">property </em><code class="sig-name descname">models</code><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.models" title="Permalink to this definition">¶</a></dt>
+<dd><p>Models included in the scan</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns a list of included models</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>List[<a class="reference internal" href="#certifai.scanner.builder.CertifaiModel" title="certifai.scanner.builder.CertifaiModel">CertifaiModel</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.add_dataset">
+<code class="sig-name descname">add_dataset</code><span class="sig-paren">(</span><em class="sig-param">dataset: certifai.scanner.builder.CertifaiDataset</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.add_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a dataset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dataset</strong> (<a class="reference internal" href="#certifai.scanner.builder.CertifaiDataset" title="certifai.scanner.builder.CertifaiDataset"><em>CertifaiDataset</em></a>) – the dataset to add</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.remove_dataset">
+<code class="sig-name descname">remove_dataset</code><span class="sig-paren">(</span><em class="sig-param">dataset_id: str</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.remove_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove a dataset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dataset_id</strong> (<em>str</em>) – Dataset to remove (by id)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.datasets">
+<em class="property">property </em><code class="sig-name descname">datasets</code><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.datasets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Datasets defined by the scan</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns a list of defined datasets</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>List[<a class="reference internal" href="#certifai.scanner.builder.CertifaiDataset" title="certifai.scanner.builder.CertifaiDataset">CertifaiDataset</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.dataset_schema">
+<em class="property">property </em><code class="sig-name descname">dataset_schema</code><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.dataset_schema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dataset schema used by the scan use case</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the dataset schema</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the dataset schema</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#certifai.scanner.builder.CertifaiDataSchema" title="certifai.scanner.builder.CertifaiDataSchema">CertifaiDataSchema</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.extract_yaml">
+<code class="sig-name descname">extract_yaml</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.extract_yaml" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract the scan as a YAML definition</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>string containing the scan template encoded as YAML</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.save">
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param">file</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the scan template to a file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file</strong> – file object opened for write to which the definition is to be saved</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">model_id: Optional[str] = None</em>, <em class="sig-param">report: Optional[str] = None</em>, <em class="sig-param">write_reports: bool = True</em>, <em class="sig-param">base_path: Optional[str] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the scan (in-process)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_id</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – Optional specific model id to restrict the scan to</p></li>
+<li><p><strong>report</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – Optional specific report (evaluation type) to restrict the scan to</p></li>
+<li><p><strong>write_reports</strong> (<em>bool</em>) – Whether to write report files for each model evaluation to the scan’s
+output directory (by default ‘./reports’ relative to <cite>base_path</cite>).  Default is True</p></li>
+<li><p><strong>base_path</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – Optional base path to evaluate relative paths in the scan definition
+with respect to (if not specified then current working directory is assumed)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>nested dictionary of reports.  Top level keys are the evaluation type, second level keys
+are the model ids, within which is the report JSON represented in dictionary format</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.from_file">
+<em class="property">static </em><code class="sig-name descname">from_file</code><span class="sig-paren">(</span><em class="sig-param">filename: str</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.from_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a scan template from file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>str</em>) – path to template file to read</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Instantiated <cite>ScanBuilder</cite> with metadata from the template that was read</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><cite>ScanTemplate</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="certifai.scanner.builder.ScanBuilder.create">
+<em class="property">static </em><code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">use_case_name: str</em>, <em class="sig-param">use_case_id: Optional[str] = None</em>, <em class="sig-param">evaluation_name: Optional[str] = None</em>, <em class="sig-param">environment: Optional[str] = None</em>, <em class="sig-param">description: Optional[str] = None</em>, <em class="sig-param">task_type: str = 'binary-classification'</em>, <em class="sig-param">prediction_description: Optional[str] = None</em>, <em class="sig-param">favorable_outcome_value: Optional[str] = None</em>, <em class="sig-param">output_path: str = './reports'</em><span class="sig-paren">)</span><a class="headerlink" href="#certifai.scanner.builder.ScanBuilder.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new template builder</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>use_case_name</strong> (<em>str</em>) – Name of the prediction use case</p></li>
+<li><p><strong>use_case_id</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – Id by which the use case will be referenced.  Defaults to the name if omitted</p></li>
+<li><p><strong>evaluation_name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – Name of the evaluation.  Defaults to the use case name if not provided</p></li>
+<li><p><strong>environment</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – Optional opaque string recording scan environment information</p></li>
+<li><p><strong>description</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – Optional human readable description of the use case</p></li>
+<li><p><strong>task_type</strong> (<em>str</em>) – Prediction task type (‘binary-classification’ or ‘regression’).  Defaults to ‘binary-clasification’</p></li>
+<li><p><strong>prediction_description</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – Optional description of what is being predicted</p></li>
+<li><p><strong>favorable_outcome_value</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – Optional favorable predicted label (classification) or direction
+(regression - one of ‘increased’ or ‘decreased’)</p></li>
+<li><p><strong>output_path</strong> (<em>str</em>) – where to write report files to.  If a relative path evaluated with respect to the base path
+at evaluation time.  Defaults to ‘./reports’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Instantiated <cite>ScanBuilder</cite> with metadata from the template that was read</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><cite>ScanTemplate</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="certifai.scanner.html" class="btn btn-neutral float-left" title="certifai.scanner package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

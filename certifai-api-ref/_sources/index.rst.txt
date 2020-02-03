@@ -1,0 +1,21 @@
+Certifai API Reference
+====================== 
+
+
+.. toctree:: 
+   :hidden:
+   :caption: General
+
+
+   Certifai home <../#http://>
+
+
+   Terms and Conditions <https://www.cognitivescale.com/legal-information/>
+
+
+.. toctree:: 
+   :maxdepth: 4
+   :caption: Packages
+
+   certifai.rst
+   certifai.scanner

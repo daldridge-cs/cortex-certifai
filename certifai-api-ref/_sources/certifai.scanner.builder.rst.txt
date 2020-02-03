@@ -1,0 +1,6 @@
+certifai.scanner.builder module
+===============================
+
+.. automodule:: certifai.scanner.builder
+   :members:
+   :undoc-members:
